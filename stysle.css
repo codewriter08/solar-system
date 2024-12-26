@@ -1,0 +1,81 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    background: url("galaxy.jpg");
+    height: 100vh;
+    width:100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.solar-system{
+    position: relative;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    top: 22rem;
+}
+.sun{
+    position: absolute;
+    height: 8rem;
+    width: 8rem;
+    background: url("sun.jpg");
+    border-radius: 50%;
+    box-shadow: 0px 0px 50px rgb(238,158,9);
+}
+
+.earth, .moon{
+    position:absolute;
+    border-color: white transparent transparent
+     transparent;
+     border-width: 0.1rem 0.1rem 0 0;
+     border-style: solid;
+     border-radius: 50%;
+}
+
+.earth{
+    width: 24rem;
+    height: 24rem;
+    animation: rotate 30s linear infinite;
+}
+.moon{
+    top: 2rem;
+    right:-0.2rem;
+    width: 5rem;
+    height: 5rem;
+    animation: rotate 5s linear infinite;
+}
+@keyframes rotate{
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.earth::before{
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    top: 2rem;
+    right: 0.5rem;
+    background-image: url("earth.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.moon::before{
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    width: 1rem;
+    height: 1rem;
+    top: 0rem;
+    right:0.2rem;
+    background-color: rgb(209,209,209);
+}
+
+
+
+
